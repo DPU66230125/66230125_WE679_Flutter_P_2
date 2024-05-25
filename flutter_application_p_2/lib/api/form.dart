@@ -24,7 +24,7 @@ class APIForm {
     }
   }
 
-  //แก้ไข Profile
+  //Edit Profile
   static Future<APIResponse> editProfile(dynamic profile) async {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode(profile);
@@ -71,7 +71,7 @@ class APIForm {
     }
   }
 
-  //ดึงข้อมูล ประวัติคำขอ VISA
+  //ดึงข้อมูล History VISA
   static Future<APIResponse> myForms(userId) async {
     var data = '''''';
     var dio = Dio();
@@ -91,7 +91,7 @@ class APIForm {
     }
   }
 
-  //สร้างคำขอ VISA
+  //New VISA VISA
   static Future<APIResponse> createForm(authorId) async {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode({"author_id": authorId});
@@ -113,7 +113,7 @@ class APIForm {
     }
   }
 
-  //แก้ไขคำขอ VISA
+  //Editคำขอ VISA
   static Future<APIResponse> editForm(dynamic form) async {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode(form);
@@ -169,7 +169,7 @@ class APIForm {
     }
   }
 
-  //ลบคำขอ VISA
+  //Deleteคำขอ VISA
   static Future<APIResponse> deleteForm(formId) async {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode({"id": formId});
